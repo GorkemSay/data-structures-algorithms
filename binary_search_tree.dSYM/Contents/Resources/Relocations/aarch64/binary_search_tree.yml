@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/gorkemsay/Desktop/DSA/binary_search_tree'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _newNode, symObjAddr: 0x0, symBinAddr: 0x100003C78, symSize: 0x48 }
+  - { offsetInCU: 0x7A, offset: 0x7A, size: 0x8, addend: 0x0, symName: _newNode, symObjAddr: 0x0, symBinAddr: 0x100003C78, symSize: 0x48 }
+  - { offsetInCU: 0xB0, offset: 0xB0, size: 0x8, addend: 0x0, symName: _insert, symObjAddr: 0x48, symBinAddr: 0x100003CC0, symSize: 0xC8 }
+  - { offsetInCU: 0xE6, offset: 0xE6, size: 0x8, addend: 0x0, symName: _search, symObjAddr: 0x110, symBinAddr: 0x100003D88, symSize: 0xAC }
+  - { offsetInCU: 0x11C, offset: 0x11C, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1BC, symBinAddr: 0x100003E34, symSize: 0x144 }
+...
