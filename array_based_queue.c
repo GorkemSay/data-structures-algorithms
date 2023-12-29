@@ -8,7 +8,7 @@ int rear = -1;
 void insert(){
     int addItem;
     if(rear == MAX -1){
-        printf("Queue is overflow \n");
+        printf("Queue is overflow. Please dequeue some elements or choose another operation. \n");
     }
     else{
         if(front == -1){
@@ -24,7 +24,7 @@ void insert(){
 
 void delete(){
     if(front == -1 || front > rear){
-        printf("Queue is underflow \n");
+        printf("Queue is underflow. Please insert some elements before attempting deletion. \n");
     }
     else{
         printf("Element delete from queue is: %d \n", queueArray[front]);
@@ -35,12 +35,12 @@ void delete(){
 void display(){
   int i;
   if(front == -1){
-    printf("Queue is empt \n");
+    printf("Queue is empty \n");
   }
   else{
     printf("Queue is: \n");
     for(i= front; i <= rear; i++){
-        printf("%d", queueArray[i]);
+        printf("%d ", queueArray[i]);
         printf("\n");
     }
   }
