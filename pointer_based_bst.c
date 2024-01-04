@@ -46,6 +46,13 @@ void insert(int data){
         printf("\n* node having data %d was inserted.", data);
     }
 }
+struct node *smallestNode(struct node *root){
+    struct node *curr = root;
+    while(curr != NULL && curr->left != NULL){
+        curr = curr->left;
+    }
+    return curr;
+}
 struct node *delete(struct node *root, int key){
     if(root == NULL){
         return root;
@@ -83,5 +90,134 @@ int search(int key){
             temp = temp->left;
         }
     }
+    return 0;
+}
+struct node *largestNode(struct node *root){
+    struct node *curr = root;
+    while(curr != NULL && curr->right != NULL){
+        curr = curr->right;
+    }
+    return curr;
+}
+void inorder(struct node *root){
+    if(root == NULL){
+        return;
+    }
+    inorder(root->left);
+    printf("%d", root->data);
+    inorder(root->right);
+}
+void preorder(struct node *root){
+    if(root == NULL){
+        return;
+    }
+    printf("%d", root->data);
+    preorder(root->left);
+    preorder(root->right);
+}
+void postorder(struct node *root){
+    if(root == NULL){
+        return;
+    }
+    postorder(root->left);
+    postorder(root->right);
+    printf("%d", root->data);
+}
+int getData(){
+    int data;
+    printf("\nPlease enter data: ");
+    scanf("%d", &data);
+    return data;
+}
+int main(){
+    int userChoice;
+    char userActive = 'Y';
+    int data;
+    struct node* result = NULL;
+ 
+    while (userActive == 'Y' || userActive == 'y')
+    {
+        printf("\n\n------- Binary Search Tree ------\n");
+        printf("\n1. Insert");
+        printf("\n2. Delete");
+        printf("\n3. Search");
+        printf("\n4. Get Larger Node Data");
+        printf("\n5. Get smaller Node data");
+        printf("\n\n-- Traversals --");
+        printf("\n\n6. Inorder ");
+        printf("\n7. Post Order ");
+        printf("\n8. Pre Oder ");
+        printf("\n9. Exit");
+ 
+        printf("\n\nEnter Your Choice: ");
+        scanf("%d", &userChoice);
+        printf("\n");
+ 
+        switch(userChoice)
+        {
+            case 1:
+                data = getData();
+                insert(data);
+                break;
+ 
+            case 2:
+                data = getData();
+                root = delete(root, data);
+                break;
+ 
+            case 3:
+                data = getData();
+                if (search(data) == 1)
+                {
+                    printf("\nData was found!\n");
+                }
+                else
+                {
+                    printf("\nData does not found!\n");
+                }
+                break;
+ 
+            case 4:
+                result = largestNode(root);
+                if (result != NULL)
+                {
+                    printf("\nLargest Data: %d\n", result->data);
+                }
+                break;
+ 
+            case 5:
+                result = smallestNode(root);
+                if (result != NULL)
+                {
+                    printf("\nSmallest Data: %d\n", result->data);
+                }
+                break;
+ 
+            case 6:
+                inorder(root);
+                break;
+ 
+            case 7:
+                postorder(root);
+                break;
+ 
+            case 8:
+                preorder(root);
+                break;
+ 
+            case 9:
+                printf("\n\nProgram was terminated\n");
+                break;
+ 
+            default:
+                printf("\n\tInvalid Choice\n");
+                break;
+        }
+ 
+        printf("\n__________\nDo you want to continue? ");
+        fflush(stdin);
+        scanf(" %c", &userActive);
+    }
+ 
     return 0;
 }
