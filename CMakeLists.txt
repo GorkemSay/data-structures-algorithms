@@ -3,4 +3,5 @@ project(Array_Stack C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(Array_Stack main.c)
+add_executable(Array_Stack main.c
+        stack_with_pointer.c)
