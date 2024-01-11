@@ -36,10 +36,24 @@ node *push(node *root, int a){
     while(iter->next != NULL){
         iter = iter->next;
     }
-
-
+    node *temp = (node*) malloc(sizeof(node));
+    temp ->data = a;
+    temp->next = NULL;
+    iter->next = temp;
+    free(temp);
+    return root;
+}
+void print(node *root){
+    while(root != NULL){
+        printf("%d -> ", root->data);
+        root = root->next;
+    }
 }
 
 int main(){
+    node *s = NULL;
+    s = push(s,10);
+    s = push(s, 20);
+    printf("%d popped", pop(s));
     return 0;
 }
