@@ -1,0 +1,3 @@
+/Users/gorkemsay/Desktop/CEN213 DSA/Array Stack/cmake-build-debug/CMakeFiles/Array_Stack.dir
+/Users/gorkemsay/Desktop/CEN213 DSA/Array Stack/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/gorkemsay/Desktop/CEN213 DSA/Array Stack/cmake-build-debug/CMakeFiles/rebuild_cache.dir

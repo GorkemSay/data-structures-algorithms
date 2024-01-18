@@ -1,0 +1,5 @@
+# ninja log v5
+1	35	1704972334805667359	CMakeFiles/Array_Stack.dir/main.c.o	cd083db706cc2996
+35	77	1704972334849224082	Array_Stack	279be6723721f632
+1	51	1704976949845414985	CMakeFiles/Array_Stack.dir/stack_with_pointer.c.o	c9848ac0d1286aac
+0	52	1704976949846647013	CMakeFiles/Array_Stack.dir/main.c.o	cd083db706cc2996
